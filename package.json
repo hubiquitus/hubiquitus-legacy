@@ -1,0 +1,29 @@
+{
+  "name": "hubiquitus-legacy",
+  "description": "Hubiquitus legacy support for version 0.7",
+  "version": "0.8.0-beta4",
+  "homepage": "www.hubiquitus.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hubiquitus/hubiquitus-legacy"
+  },
+  "main": "./index",
+  "engines": {
+    "node": ">0.10.0"
+  },
+  "dependencies": {
+    "lodash": "2.2.*",
+    "tv4": "1.0.11",
+    "hubiquitus": "0.8.0-beta4",
+    "coffee-script" : "1.6.0"
+  },
+  "devDependencies": {
+    "jshint": "2.3.*",
+    "sinon": "1.7.*",
+    "should": "2.0.*",
+    "mocha": "1.13.*"
+  },
+  "scripts": {
+    "test": "mocha -R spec test/*"
+  }
+}
