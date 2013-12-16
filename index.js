@@ -1,11 +1,11 @@
 require("coffee-script");
-h = require("hubiquitus");
+h = require("hubiquitus-core");
 exports.validator = require("./lib/validator");
 exports.UUID = {generate: h.utils.uuid};
 exports.codes = require("./lib/codes");
 Wrapper = require("./lib/actorWrapper");
 
-exports.addActor = function (id, actor) {
+exports.addActor = function (id, actor, done) {
   var fullid = id;
   if (h.utils.aid.isBare(id)) fullid = id + "/" + h.utils.uuid();
   var wrapper = Wrapper(fullid, actor);
@@ -13,8 +13,10 @@ exports.addActor = function (id, actor) {
   if (actor.initialize) {
     actor.initialize(function () {
       h.addActor(fullid, wrapper.onMessage, wrapper);
+      done && done();
     });
   } else {
     h.addActor(fullid, wrapper.onMessage, wrapper);
+    done && done();
   }
 }

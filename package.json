@@ -1,7 +1,7 @@
 {
   "name": "hubiquitus-legacy",
   "description": "Hubiquitus legacy support for version 0.7",
-  "version": "0.8.0-beta4",
+  "version": "0.8.0-beta5",
   "homepage": "www.hubiquitus.com",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   "dependencies": {
     "lodash": "2.2.*",
     "tv4": "1.0.11",
-    "hubiquitus": "0.8.0-beta4",
+    "hubiquitus": "0.8.0-beta5",
     "coffee-script" : "1.6.0"
   },
   "devDependencies": {
