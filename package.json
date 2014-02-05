@@ -1,7 +1,7 @@
 {
   "name": "hubiquitus-legacy",
   "description": "Hubiquitus legacy support for version 0.7",
-  "version": "0.8.0-rc1",
+  "version": "0.8.1",
   "homepage": "www.hubiquitus.com",
   "repository": {
     "type": "git",

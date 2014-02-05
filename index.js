@@ -1,6 +1,6 @@
 require("coffee-script");
-h = require("hubiquitus-core");
-Wrapper = require("./lib/actorWrapper");
+var h = require("hubiquitus-core");
+var Wrapper = require("./lib/actorWrapper");
 
 var logger = null;
 
