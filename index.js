@@ -14,17 +14,15 @@ exports.UUID = {generate: h.utils.uuid};
 exports.codes = require("./lib/codes");
 
 exports.addActor = function (id, actor, done) {
-  var fullid = id;
-  if (h.utils.aid.isBare(id)) fullid = id + "/" + h.utils.uuid();
-  var wrapper = Wrapper(fullid, actor, logger);
+  var wrapper = Wrapper(id, actor, logger);
 
   if (actor.initialize) {
     actor.initialize(function () {
-      h.addActor(fullid, wrapper.onMessage, wrapper);
+      h.addActor(id, wrapper.onMessage, wrapper);
       done && done();
     });
   } else {
-    h.addActor(fullid, wrapper.onMessage, wrapper);
+    h.addActor(id, wrapper.onMessage, wrapper);
     done && done();
   }
-}
+};
